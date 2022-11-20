@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/global.css">
+
+    <title>ECM Tool</title>
+</head>
+<body>
+    <header>
+        <h1 class='title'>
+            ECM Tool
+        </h1>
+        <div id="stepField" onclick="clearStep()">
+            0
+        </div>
+    </header>
+    <main>
+        <div class="field">
+            <h2>Medida Alvo</h2>
+            <input id="targetMeasure" type="number">
+        </div>
+
+        <div class="field">
+            <h2>Medida Inicial</h2>
+            <input id="startMeasure" type="number">
+        </div>
+
+        <div class="field">
+            <h2>Tempo</h2>
+            <div class="timeField">
+                minutos : segundos
+            </div>
+            <div class="timeField">
+                <input type="number" id="inputMinutes"> : <input type="number" id="inputSeconds">
+            </div>
+        </div>
+        
+        <div id="timerField" class="field">
+            00 : 00
+        </div>
+
+        <div class="field">
+            <button id="toggleTimerButton" onclick="toggleTimer1()">Inciar</button>
+        </div>
+
+        <div class="field">
+            <button onclick="stopTimer()">Parar</button>
+        </div>
+
+        <div class="field">
+            <h2>medida resultada</h2>
+            <input id="resultMeasure" type="number">
+        </div>
+
+        <div class="field">
+            <button onclick="calculateNextStep()">Calcular</button>
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+    <script src="scripts/script.js" ></script>
+    <script src="scripts/cron.js" ></script>
+    <script src="scripts/convertInMiliseconds.js" ></script>
+    <script src="scripts/formatTime.js" ></script>
+</body>
+</html>
