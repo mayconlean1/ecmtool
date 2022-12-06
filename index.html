@@ -19,6 +19,12 @@
         </div>
     </header>
     <main>
+
+        <div class="field">
+            <h2>Nome do Processo</h2>
+            <input id="processName" type="text" value="processo 1">
+        </div>
+        
         <div class="field">
             <h2>Medida Alvo</h2>
             <input id="targetMeasure" type="number">
@@ -39,25 +45,18 @@
             </div>
         </div>
         
-        <div id="timerField" class="field">
-            00 : 00
-        </div>
 
         <div class="field">
-            <button id="toggleTimerButton" onclick="toggleTimer1()">Inciar</button>
-        </div>
-
-        <div class="field">
-            <button onclick="stopTimer()">Parar</button>
-        </div>
-
-        <div class="field">
-            <h2>medida resultada</h2>
+            <h2>Valor medido</h2>
             <input id="resultMeasure" type="number">
         </div>
 
         <div class="field">
             <button onclick="calculateNextStep()">Calcular</button>
+        </div>
+        
+        <div class="field">
+            <button onclick="navigateHistory()">Histórico</button>
         </div>
 
     </main>
