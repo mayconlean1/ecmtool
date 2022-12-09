@@ -11,8 +11,6 @@ function renderMain (){
 
     const main = document.querySelector('main')
 
-    console.log('lastInputs :>> ', lastInputs);
-
     main.innerHTML = `
     <div class="field">
         <h2>Nome do Processo</h2>
@@ -55,4 +53,5 @@ function renderMain (){
     `
 
     document.querySelector('#backButton').hidden = true
+    
 }

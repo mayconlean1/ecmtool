@@ -13,7 +13,7 @@ function RenderHistory(){
     
     function createTrHistory (){
         const history = JSON.parse( localStorage.getItem(processName) )
-        let tr = ''
+        let tr = ``
         try {
             history.forEach((h, i)=>{
                 const minutes = h.inputMinutes.padStart(2 , '0')
@@ -31,7 +31,6 @@ function RenderHistory(){
             })
         } catch (error) {
             tr = 'Sem historico'
-            console.log('catch :>> ', 'catch');
         }
 
         return tr
@@ -40,9 +39,13 @@ function RenderHistory(){
 
     const main = document.querySelector('main')
     main.innerHTML = `
+    <div id="clearHistoryButton">
+        <button onclick="clearHistory('${processName}')">Limpar</button>
+    </div>
     <div class="fied">
+
         <h2>
-            processo1
+            ${processName}
         </h2>
 
         <table >
@@ -63,4 +66,19 @@ function RenderHistory(){
 
     document.querySelector('#backButton').hidden = false
     
+    
+}
+
+function clearHistory(processName){
+    
+    try {
+        lastInputs = JSON.parse( localStorage.getItem('lastInputs'))
+        for(i in lastInputs){}
+        localStorage.removeItem(processName)
+    } catch (error) {
+        
+    }
+
+    renderMain ()
+
 }
