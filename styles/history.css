@@ -1,0 +1,29 @@
+div>h2{
+    padding: 0.1rem;
+}
+
+table{
+    border-collapse: collapse; 
+    border: solid 1px black;
+}
+
+th{
+    
+    font-size: 0.6rem;
+    font-weight: 300;
+    padding: 0.4rem 0.2rem; 
+    
+    border-right: solid black 1px ;
+}
+
+.titleTh{
+    border-bottom: solid black 1px ;
+}
+
+#backButton{
+    position: absolute;
+    left: 1rem;
+    
+    padding: 0.1rem;
+    width: 4rem;
+}
